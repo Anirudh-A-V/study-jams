@@ -1,14 +1,32 @@
 import React from 'react'
-import { Box} from "@chakra-ui/react"
-import {Navbar} from "../components/Navbar/Navbar"
-
+import { Box, Flex, SimpleGrid } from "@chakra-ui/react"
+import { Navbar } from "../components/Navbar/Navbar"
+import Cards from '../components/Cards/Cards'
 
 export const Home = () => {
-  return (
-   <Box bg={{base:"red",md:"blue",lg:"green"}} height="100vh">
-   <Navbar/>
+  const Name = [
+    'Hello World',
+    'How are you',
+    'Lorem Lipsum',
+    'Karthik',
+    'Dhananjay',
+    'Sai',
+    'Sanjay',
+  ]
 
-   </Box>
+  return (
+    <Flex flexDirection={'column'}>
+      <Navbar />
+      <SimpleGrid spacing={1} templateColumns='repeat(4, 1fr)'  paddingLeft={'200px'} paddingRight={'200px'}>
+
+        {Name.map((item, index) => {
+          return (
+            <Cards Name={item}  key={index} />
+          )
+        })}
+
+      </SimpleGrid>
+    </Flex>
   )
 }
 
