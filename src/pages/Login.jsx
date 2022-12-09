@@ -1,9 +1,12 @@
 import { Box, Flex, Heading, FormControl, FormLabel, Input, Button, } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { LoginContext } from '../contexts/LoginContext'
 
 const Login = () => {
-    const [email, setEmail] = useState('')
-    const [loggedIn, setLoggedIn] = useState(false)
+    // const [email, setEmail] = useState('')
+    // const [loggedIn, setLoggedIn] = useState(false)
+
+    const { email, setEmail, loggedIn, setLoggedIn } = useContext(LoginContext)
 
     return (
         <Flex flexDirection={'column'} bg={'#f5f5f5'}>
@@ -36,7 +39,7 @@ const Login = () => {
 
 
                 </Box>
-                {loggedIn && <Heading color={'blue'}>{email}</Heading>}
+                {/* {loggedIn && <Heading color={'blue'}>{email}</Heading>} */}
 
             </Flex>
         </Flex>
