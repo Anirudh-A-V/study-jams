@@ -27,6 +27,9 @@ const Login = () => {
 
                     <Button marginTop={'20px'} bg={'green'} color={'white'}
                         onClick={() => setLoggedIn(true)}
+                        _hover={{
+                            bg: 'green.500',
+                        }}
                     >
                         Log In
                     </Button>
