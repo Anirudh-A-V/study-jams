@@ -34,7 +34,7 @@ const Cards = ({ Name }) => {
                         </Button>
                     </ButtonGroup>
                     <Button marginTop={'20px'} maxW={'100px'} variant='solid' bg={'green'} color={'white'} _hover={{bg: 'green.500'}}>
-                        Add to Card
+                        Add to Cart
                     </Button>
                 </CardFooter>
             </Card>
