@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+
 import { Flex, SimpleGrid, Input } from "@chakra-ui/react"
 import { Navbar } from "../components/Navbar/Navbar"
 import Cards from '../components/Cards/Cards'
@@ -13,6 +14,12 @@ export const Home = () => {
     'Sai',
     'Sanjay',
   ]
+  
+  const [query, setQuery] = useState('')
+
+  function search(items){
+    return items.filter((name) => name.toLowerCase().includes(query.toLowerCase()))
+  }
 
   const [query, setQuery] = useState('')
   const [name, setName] = useState([])
@@ -42,6 +49,7 @@ export const Home = () => {
 
       <SimpleGrid spacing={1} templateColumns='repeat(4, 1fr)' paddingLeft={'200px'} paddingRight={'200px'} paddingTop={'50px'} paddingBottom={'50px'}>
         {search(name).map((item, index) => {
+
           return (
             <Cards Name={item} key={index} />
           )

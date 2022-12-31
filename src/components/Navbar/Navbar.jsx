@@ -4,6 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
 export const Navbar = ({ Name }) => {
+
     const [text, setText] = useState('');
     console.log(text);
 
@@ -19,6 +20,7 @@ export const Navbar = ({ Name }) => {
             <Flex marginLeft={'50px'}>
                 <Input variant='outline' placeholder='Outline' maxW={'400px'} minW={'300px'} onChange={(e) => setText(e.target.value)} />
                 <Button bg={'green'} color={'white'} _hover={{bg: 'green.500'}}>
+
                     <AiOutlineSearch />
                 </Button>
             </Flex>
@@ -36,7 +38,6 @@ export const Navbar = ({ Name }) => {
                     Log In
                 </Link>
             </Button>
-
         </Flex>
     )
 }
