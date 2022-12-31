@@ -21,6 +21,7 @@ const Test = () => {
                 </LoginContext.Provider>
 
                 {loggedIn && <Heading color={'blue'}>{email}</Heading>}
+
             </Flex>
         </Flex>
     )
